@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ButinDV_HW2_9" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIb-Cm-iDz" customClass="SpringButton" customModule="Spring">
+                                <rect key="frame" x="42.5" y="531" width="290" height="36"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="animationButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iQb-dY-8QR"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="41q-K4-0wL" customClass="SpringView" customModule="Spring">
+                                <rect key="frame" x="37.5" y="30" width="300" height="300"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpP-sK-TZO">
+                                        <rect key="frame" x="5" y="5" width="290" height="290"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="dpP-sK-TZO" firstAttribute="leading" secondItem="41q-K4-0wL" secondAttribute="leading" constant="5" id="28f-Es-iff"/>
+                                    <constraint firstAttribute="trailing" secondItem="dpP-sK-TZO" secondAttribute="trailing" constant="5" id="6AI-md-pgA"/>
+                                    <constraint firstAttribute="bottom" secondItem="dpP-sK-TZO" secondAttribute="bottom" constant="5" id="6jf-aa-hi6"/>
+                                    <constraint firstItem="dpP-sK-TZO" firstAttribute="top" secondItem="41q-K4-0wL" secondAttribute="top" constant="5" id="CMJ-jA-kZz"/>
+                                    <constraint firstAttribute="width" secondItem="41q-K4-0wL" secondAttribute="height" multiplier="1:1" id="LeS-NE-X7w"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="41q-K4-0wL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="9YJ-od-bTJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DIb-Cm-iDz" secondAttribute="bottom" constant="100" id="BMC-cA-YU3"/>
+                            <constraint firstItem="DIb-Cm-iDz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G7u-Ny-t9e"/>
+                            <constraint firstItem="DIb-Cm-iDz" firstAttribute="width" secondItem="dpP-sK-TZO" secondAttribute="width" id="KIF-hX-elU"/>
+                            <constraint firstItem="41q-K4-0wL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nt5-Yd-qjA"/>
+                            <constraint firstItem="41q-K4-0wL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="khQ-2g-fgc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="animationButton" destination="DIb-Cm-iDz" id="zgx-3f-cee"/>
+                        <outlet property="animationLabel" destination="dpP-sK-TZO" id="hbm-QD-hvJ"/>
+                        <outlet property="animationView" destination="41q-K4-0wL" id="Lhq-54-q0S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
